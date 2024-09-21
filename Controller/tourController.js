@@ -25,10 +25,26 @@ exports.getTours = async (req, res) => {
         durationHours: doc.data().durationHours,
         price: doc.data().price,
         maxCapacity: doc.data().maxCapacity,
-        createdAt: new Date(doc.data().createdAt) // Asigna la fecha de creación actual
+        createdAt: new Date(doc.data().createdAt),
+        images: doc.data().images
       }));
       //{ id: doc.id, ...doc.data() }));
     res.status(200).json(customers);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
+// Actualizar un Tour
+exports.updateTour = async (req, res) => {
+  const tourId = req.params.id; // Obtiene el ID del tour desde los parámetros de la URL
+  const updatedData = req.body; // Los nuevos datos para actualizar
+
+  try {
+    const tourRef = db.collection('tours').doc(tourId);
+    await tourRef.update(updatedData); // Actualiza el documento en Firestore
+
+    res.status(200).send(`Tour updated with ID: ${tourId}`);
   } catch (error) {
     res.status(500).send(error.message);
   }

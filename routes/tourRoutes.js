@@ -5,6 +5,7 @@ const tourController = require('../Controller/tourController');
 // Rutas de tours
 router.post('/', tourController.createTour);
 router.get('/', tourController.getTours);
-// Otras rutas (GET by ID, PUT, DELETE)
+router.put('/:id', tourController.updateTour);
+
 
 module.exports = router;
