@@ -9,12 +9,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Env files (Sensitive environment variables)
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+
 
 # Directory for test coverage reports
 coverage/
@@ -51,4 +46,3 @@ temp/
 .DS_Store
 Thumbs.db
 
-node_modules/
