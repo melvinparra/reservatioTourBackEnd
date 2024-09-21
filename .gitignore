@@ -1,0 +1,54 @@
+# Node modules
+node_modules/
+
+# Log files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files (Sensitive environment variables)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Directory for test coverage reports
+coverage/
+
+# Optional npm cache directory
+.npm/
+
+# Debug logs and output files
+*.out
+*.pid
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Compiled binaries (if applicable)
+*.dll
+*.exe
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# IDE and Editor directories/files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+node_modules/
